@@ -1,11 +1,11 @@
 function nothing = Show_Specific_Mobile_Movement(all_mobile_coordinate,num_of_bs,user_index)
 
-animate = animatedline('Marker' ,'o');
+animate = animatedline('Marker' ,'o','MarkerSize',1);
 nothing = 0;
 X_mobile     = all_mobile_coordinate(:,1);
 Y_mobile     = all_mobile_coordinate(:,2);
 addpoints(animate,X_mobile(user_index),Y_mobile(user_index));
-drawnow limitrate
+drawnow 
 end
   %{
 bs_of_mobile = all_mobile_coordinate(:,3);
